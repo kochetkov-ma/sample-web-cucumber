@@ -71,6 +71,6 @@ dependencies {
     compile "io.qameta.allure:allure-cucumber2-jvm:latest.release"
     testCompile "io.cucumber:cucumber-java8:$versions.cucumber"
     testCompile "io.cucumber:cucumber-junit:$versions.cucumber"
-    compile "ru.iopump.pumpfw:commons:$versions.iopump"
+    compile "ru.iopump.pumpfw:cucumber:$versions.iopump"
 
 }
