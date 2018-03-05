@@ -1,0 +1,11 @@
+.idea/
+.allure
+.gradle
+gradle/
+target/
+out/
+build/
+allure-results/
+*.log
+*.iml
+.gradle

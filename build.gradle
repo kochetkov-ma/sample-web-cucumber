@@ -4,12 +4,17 @@ version '1.0-SNAPSHOT'
 repositories {
     mavenCentral()
     mavenLocal()
+    maven {
+        name 'oss'
+        url 'https://oss.sonatype.org/content/groups/public'
+    }
 }
 
 buildscript {
     repositories {
         mavenCentral()
         jcenter()
+
     }
     dependencies {
         classpath 'io.qameta.allure:allure-gradle:latest.release'
@@ -46,7 +51,7 @@ ext {
             trove        : "3.+",
             joda_time    : "latest.release",
             cucumber     : '2.3.1',
-            iopump     : '0.1-SNAPSHOT'
+            iopump       : '0.1-SNAPSHOT'
     ]
 }
 
@@ -66,8 +71,6 @@ dependencies {
     compile "io.qameta.allure:allure-cucumber2-jvm:latest.release"
     testCompile "io.cucumber:cucumber-java8:$versions.cucumber"
     testCompile "io.cucumber:cucumber-junit:$versions.cucumber"
-    compile "ru.iopump:cucumber:$versions.iopump"
-    compile "ru.iopump:web:$versions.iopump"
-    compile "ru.iopump:commons:$versions.iopump"
+    compile "ru.iopump.pumpfw:commons:$versions.iopump"
 
 }
