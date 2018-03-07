@@ -6,6 +6,7 @@ target/
 out/
 build/
 allure-results/
+gradlew*
 *.log
 *.iml
 .gradle

@@ -1,13 +1,15 @@
-group 'mk.iopump'
+group 'mk.iopump.sample'
 version '1.0-SNAPSHOT'
 
 repositories {
-    mavenCentral()
     mavenLocal()
+    mavenCentral()
+    /*
     maven {
         name 'oss'
         url 'https://oss.sonatype.org/content/groups/public'
     }
+    */
 }
 
 buildscript {
@@ -67,10 +69,9 @@ allure {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile "io.qameta.allure:allure-cucumber2-jvm:latest.release"
-    testCompile "io.cucumber:cucumber-java8:$versions.cucumber"
+    testCompile 'junit:junit:4.12'
     testCompile "io.cucumber:cucumber-junit:$versions.cucumber"
+    compile "io.qameta.allure:allure-cucumber2-jvm:latest.release"
     compile "ru.iopump.pumpfw:cucumber:$versions.iopump"
 
 }

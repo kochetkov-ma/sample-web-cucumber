@@ -9,4 +9,9 @@ public class TinkoffCredit extends TinkoffBasePage{
     public TinkoffCredit(Browser browser) {
         super(browser);
     }
+
+    @Override
+    public String getTitle() {
+        return super.getTitle();
+    }
 }

@@ -36,7 +36,7 @@ public class MainMenu extends BaseComponent {
 
     @PAction("выбрать")
     public void select(@Nullable String value) {
-        if (dropDownMenu.isExists(100).result().isSuccess()) {
+        if (dropDownMenu.isDisplayed(100).result().isSuccess()) {
             dropDownMenu.click();
         }
         items.stream().filter(item -> StringUtils.equalsAnyIgnoreCase(item.getText(), value))
