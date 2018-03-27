@@ -14,10 +14,10 @@ import ru.mk.pump.web.page.api.Page;
 
 public class MainMenu extends BaseComponent {
 
-    @FindBy(xpath = "//span[@data-qa-file='MenuItem']")
+    @FindBy(tagName = "a")
     private List<Button> items;
 
-    @FindBy(id = "mainDropdownMenu")
+    @FindBy(xpath = "//span[text()='еще']")
     private Button dropDownMenu;
 
     //region CONSTRUCTORS

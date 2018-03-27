@@ -2,6 +2,7 @@ package ru.iopump.sample.web.pages;
 
 import org.openqa.selenium.support.FindBy;
 import ru.iopump.sample.web.components.MainMenu;
+import ru.mk.pump.commons.constants.StringConstants;
 import ru.mk.pump.commons.reporter.Reporter;
 import ru.mk.pump.web.browsers.Browser;
 import ru.mk.pump.web.common.api.annotations.PComponent;
@@ -13,10 +14,15 @@ import ru.mk.pump.web.page.BasePage;
 abstract class TinkoffBasePage extends BasePage{
 
     @PComponent("Главное меню")
+    @FindBy(xpath = "//div[@data-qa-file='FirstMenu' and contains(@class, 'root')]")
     private MainMenu mainMenu;
 
+    @PComponent("Второе меню")
+    @FindBy(xpath = "//div[@data-qa-file='SecondMenu' and contains(@class, 'root')]")
+    private MainMenu secondMenu;
+
     @PElement("Авторизация")
-    @FindBy(xpath = "//span[text()='Войти']/..")
+    @FindBy(xpath = "//span[text()='Войти' and @data-qa-file='FirstMenu']/..")
     private Button login;
 
     @PElement("Лого")

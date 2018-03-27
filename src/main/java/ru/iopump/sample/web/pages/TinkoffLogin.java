@@ -19,7 +19,7 @@ public class TinkoffLogin extends TinkoffBasePage{
     private Input passwordInput;
 
     @PElement("Войти")
-    @FindBy(xpath = "//span[text()='Войти']/..")
+    @FindBy(xpath = "//button[@type='submit']")
     private Button loginButton;
 
     public TinkoffLogin(Browser browser) {

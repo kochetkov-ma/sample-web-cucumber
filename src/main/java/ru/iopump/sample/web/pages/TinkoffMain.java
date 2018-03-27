@@ -6,6 +6,8 @@ import ru.mk.pump.web.common.api.annotations.PPage;
 @PPage(value = "Главная страница", desc = "Тинькофф - Главная страница")
 public class TinkoffMain extends TinkoffBasePage{
 
+
+
     public TinkoffMain(Browser browser) {
         super(browser);
     }
